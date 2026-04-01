@@ -1,0 +1,11 @@
+{
+  "name": "skills-agents",
+  "version": "1.0.0",
+  "description": "A collection of [Claude Code](https://docs.anthropic.com/en/docs/claude-code) custom skills and agent definitions that enforce disciplined, worker-routed AI-assisted development workflows.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

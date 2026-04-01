@@ -70,5 +70,18 @@ For EVERY task — no exceptions — invoke the `using-superpowers` skill before
 4. No silent fallback to generic behavior — routing is always visible
 
 ## License
-
 MIT
+
+## Local connect
+1. Link the 'skills' folder
+```
+ln -sfn ~/projects/skills-agents/skills ~/.claude/skills
+```
+2. Link the 'agents' folder
+```
+ln -sfn ~/projects/skills-agents/agents ~/.claude/agents
+```
+3. Link the CLAUDE.md file
+```
+ln -sfn ~/projects/skills-agents/CLAUDE.md ~/.claude/CLAUDE.md
+```
