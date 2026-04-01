@@ -44,22 +44,23 @@ Worker agent definitions that skills route tasks to. Each agent has a focused ro
 | `code-simplifier` | Simplifies recently modified code while preserving behavior |
 | `research` | General-purpose research agent |
 
-## Installation
-
-Copy skills and agents into your Claude Code configuration directory:
-
-```sh
-# Skills
-cp -r skills/* ~/.claude/skills/
-
-# Agents (if supported by your setup)
-cp -r agents/* ~/.claude/agents/
+## Installation manual
+1. Link the 'skills' folder
+```
+ln -sfn "$PWD/skills" ~/.claude/skills
+```
+2. Link the 'agents' folder
+```
+ln -sfn "$PWD/agents" ~/.claude/agents
+```
+3. Link the CLAUDE.md file
+```
+ln -sfn "$PWD/CLAUDE.md" ~/.claude/CLAUDE.md
 ```
 
-Then add the routing instruction to your `~/.claude/CLAUDE.md`:
-
-```markdown
-For EVERY task — no exceptions — invoke the `using-superpowers` skill before doing any work.
+## Or use npm
+```
+npm run mount
 ```
 
 ## How It Works
@@ -71,17 +72,3 @@ For EVERY task — no exceptions — invoke the `using-superpowers` skill before
 
 ## License
 MIT
-
-## Local connect
-1. Link the 'skills' folder
-```
-ln -sfn ~/projects/skills-agents/skills ~/.claude/skills
-```
-2. Link the 'agents' folder
-```
-ln -sfn ~/projects/skills-agents/agents ~/.claude/agents
-```
-3. Link the CLAUDE.md file
-```
-ln -sfn ~/projects/skills-agents/CLAUDE.md ~/.claude/CLAUDE.md
-```

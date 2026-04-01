@@ -4,8 +4,11 @@
   "description": "A collection of [Claude Code](https://docs.anthropic.com/en/docs/claude-code) custom skills and agent definitions that enforce disciplined, worker-routed AI-assisted development workflows.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mount": "npm run mount_skills && npm run mount_agents && npm run mount_config",
+    "mount_skills": "ln -sfn \"$PWD/skills\" ~/.claude/skills",
+    "mount_agents": "ln -sfn \"$PWD/agents\" ~/.claude/agents",
+    "mount_config": "ln -sfn \"$PWD/CLAUDE.md\" ~/.claude/CLAUDE.md"
   },
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }
